@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+	 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+	 <link href="./styles.css" rel="stylesheet" type="text/css" />
+	 <h:outputStylesheet library="css" name="bootstrap.min.css" />
+	 <h:outputStylesheet library="css" name="styles1.css" />
+
+</h:head>
+
+<h:body style="background-color:#{calculator.backgroundColor}">
+
+	<div class="container">
+		<h:form>
+			<table class="table">
+				<tr>
+					<td
+						style="background-color:#{calculator.displayBackgroundColor}; color:#{calculator.displayNumberColor}"
+						colspan="3" class="display">#{calculator.display}</td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.cancel()}" value="C" 
+							class="button btn-danger button" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.openSettingsPage()}" value="S"
+							class="button btn-secondary button" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(7)}" value="7"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(8)}" value="8"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(9)}" value="9"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.divide()}" value="/" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.sqrt()}" value="sqrt" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(4)}" value="4"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(5)}" value="5"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(6)}" value="6"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.multiply()}" value="*" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.percent()}" value="%" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(1)}" value="1"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(2)}" value="2"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(3)}" value="3"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.subtract()}" value="-" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+					<td rowspan="2"><h:commandButton
+							action="#{calculator.calculate()}" value="=" class="equalButton btn-success button"
+							disabled="#{calculator.hide}" /></td>
+				</tr>
+				<tr>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}; background-color:#{calculator.buttonBackgroundColor}"
+							action="#{calculator.setValue1(0)}" value="0"
+							class="button btn-light button" disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.setValue1('.')}" value="," class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.changeSign()}" value="+/-" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+					<td><h:commandButton
+							style="font-family: #{calculator.fontFamily}"
+							action="#{calculator.add()}" value="+" class="button btn-info button"
+							disabled="#{calculator.hide}" /></td>
+				</tr>
+			</table>
+
+			<br />
+		</h:form>
+	</div>
+</h:body>
+
+</html>

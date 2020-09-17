@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Settings</title>
+</head>
+<h:body>
+<h:form>
+	<h3>Background color :</h3><br/>
+	<h:selectOneRadio value="#{calculator.backgroundColor}">
+		<f:selectItem itemValue="FloralWhite" itemLabel="White" />	
+  		<f:selectItem itemValue="silver" itemLabel="Silver" />	   			
+	</h:selectOneRadio>
+	<br/>
+	<h3>Display background color :</h3><br/>
+	<h:selectOneRadio value="#{calculator.displayBackgroundColor}">
+  		<f:selectItem itemValue="rgba(82, 81, 81, 0.7)" itemLabel="Dark Grey" />
+   		<f:selectItem itemValue="LightSkyBlue" itemLabel="Blue" />	   			
+	</h:selectOneRadio>
+	<br/>
+	<h3>Display number color :</h3><br/>
+	<h:selectOneRadio value="#{calculator.displayNumberColor}">
+  		<f:selectItem itemValue="white" itemLabel="White" />
+   		<f:selectItem itemValue="black" itemLabel="Black" />	   			
+	</h:selectOneRadio>
+	<br/>
+	<h3>Font family :</h3><br/>
+	<h:selectOneRadio value="#{calculator.fontFamily}">
+  		<f:selectItem itemValue="verdana" itemLabel="Verdana" />
+   		<f:selectItem itemValue="serif" itemLabel="Sserif" />
+   		<f:selectItem itemValue="sans-serif" itemLabel="Sans-serif" />
+   		<f:selectItem itemValue="monospace" itemLabel="Monospace" />	   			
+	</h:selectOneRadio>
+	<br/>
+	<h3>Button background color :</h3><br/>
+	<h:selectOneRadio value="#{calculator.buttonBackgroundColor}">
+  		<f:selectItem itemValue="" itemLabel="Default" />
+   		<f:selectItem itemValue="Cornsilk" itemLabel="Cornsilk" />	   			
+	</h:selectOneRadio>
+	<br/>
+	<h:commandButton action="#{calculator.openIndexPage()}" value="Zatwierdz"/>
+</h:form>
+</h:body>
+</html>

@@ -1,0 +1,58 @@
+
+html {
+	
+	width: 5%;
+	
+}
+table{
+	background-color: rgba(217, 217, 217, 0.7);	
+
+}
+td{
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: rgba(220, 220, 220, 0.7);
+
+}
+tr{
+
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.button{
+	margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    width: 58px;
+    height: 50px;
+	font-size: 22px;
+ 
+}
+.equalButton{
+	margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+	width: 58px;
+	height: 105px;
+	font-size: 22px;
+}
+.display{
+	height: 58px;
+	color: white;
+	background-color: rgba(82, 81, 81, 0.7);
+	font-size: 26px;
+	text-align: right;
+	border: 0px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-left: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	
+}
